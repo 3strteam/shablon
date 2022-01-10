@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Holder Game</title>
+	<link rel="stylesheet" href="shema.css">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="show_hide.js"></script>
+</head>
+<body>
+	<div class="phone">
+		<div class="content">
+			<span class="text holdMe">Hold Me</span>
+			<div class="game-space">
+				<div class="header">
+					<div class="field money text">
+						20<i class="fas fa-dollar-sign"></i>
+					</div>
+					<div class="field hold text">
+						10<i class="fas fa-hand-pointer"></i>
+					</div>
+					<div class="field auto text">
+						15<i class="fas fa-clock"></i>
+					</div>
+				</div>
+				<div class="loader">
+					<div class="load"></div>
+				</div>
+				<i class="fas fa-cog decor d1 rotate"></i>
+				<i class="fas fa-cog decor d2 rotate"></i>
+				<input type="checkbox" id="click-check" name = "footer-radio" hidden>
+				<input type="checkbox" id="auto-check" name = "footer-radio" hidden>
+				<div class="footer">
+					<label id="label1" class="footer-icon" onclick="">
+						<i class="fas fa-info-circle"></i>
+					</label>
+					<label id="label2" for="click-check" class="footer-icon" onclick="activate(this)">
+						<i class="fas fa-hand-pointer"></i>
+					</label>
+					<label id="label3" class="footer-icon" onclick="">
+						<i class="fas fa-shopping-cart"></i>
+					</label>
+					<label id="label4" for="auto-check" class="footer-icon" onclick="activate(this)">
+						<i class="fas fa-clock"></i>
+					</label>
+					<label id="label5" class="footer-icon" onclick="">
+						<i class="fas fa-cog"></i>
+					</label>
+				</div>
+				<div class="slider" id="click-sl">
+					<div class="flag-sl flag-click-sl"><i class="fas fa-arrow-up"></i></div>
+				</div>
+				<div class="slider" id="auto-sl">
+					<div class="flag-sl flag-auto-sl"><i class="fas fa-arrow-up"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="main.js"></script>

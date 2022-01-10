@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@200;300&display=swap');
+/* font-family: "Glory", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/* font-family: 'Varela Round', sans-serif; */
+
+
+* {
+	box-sizing: border-box;
+	user-select: none;
+}
+*:hover {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+/*div {
+	border: 1px solid black;
+}*/
+
+body {
+	display: grid;
+	place-items: center;
+	/*background: #F8F7FF;*/
+	background: var(--bg);	
+}
+
+.phone {
+	width: 300px;
+	height: 600px;
+	background-image: url("border1.png");
+	background-size: cover;
+	background-position: center;
+	display: grid;
+	justify-items: center;
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 37px 17px 10px 19px;
+}
+
+.text {
+	font-family: 'Varela Round', sans-serif;
+}
+
+.holdMe {
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+	color: var(--ltxt);
+	font-size: 20px;
+	cursor: default;
+	user-select: none;
+	text-align: center;
+	opacity: 0.8;
+}
+
+.game-space {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.header {
+	justify-self: center;
+	width: 90%;
+	height: 30px;
+	grid-gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.loader {
+	display: none;
+	opacity: 0;
+	position: absolute;
+	width: 120px;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 8px;
+	border: 1px solid #F07167;
+	border-radius: 20px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transition: opacity .3s;
+}
+
+.loader .load {
+	height: 100%;
+	border-radius: 20px;
+	width: 0px;
+	background: #F07167;
+}
+
+.active {
+	display: block;
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.field {
+	position: relative;
+	height: 20px;
+	align-self: flex-end;
+	padding: 10px 0px 22px 0px;
+	border-bottom: 2px solid #0081A7;
+	text-align: center;
+	color: var(--ltxt);
+}
+
+.money > i, .hold > i, .auto > i {
+	position: absolute;
+	right: 2px;
+	bottom: 5px;
+}
+
+.decor {
+	position: absolute;
+	font-size: 120px;
+	color: #FED9B7;
+	opacity: 0.9;
+}
+
+.d1 {
+	top: 50px;
+	right: -65px;
+}
+
+.d2 {
+	bottom: 70px;
+	left: -65px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 60px;
+/*	background: #0081A7;*/
+	border-radius: 0 0 28px 28px;
+	padding: 4px;
+	display: grid;
+	grid-gap: 3px;
+	align-items: flex-end;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.footer .footer-icon {
+	border-radius: 5px 5px 5px 5px;
+	background: #F07167;
+	display: grid;
+	place-items: center;
+	color: var(--ltxt);
+	cursor: pointer;
+	padding: 5px 0;
+}
+
+.footer .footer-icon:first-child {
+	border-radius: 5px 5px 5px 60px;
+}
+
+.footer .footer-icon:nth-child(2) {
+	background: #0081A7;
+}
+
+.footer .footer-icon:nth-child(3) {
+	background: #006D77;
+}
+
+.footer .footer-icon:nth-child(4) {
+	background: #B5E48C;
+}
+
+.footer .footer-icon:nth-child(5) {
+	background: #FBBFA3;
+}
+
+.footer .footer-icon:last-child {
+	border-radius: 5px 5px 60px 5px;
+}
+
+label.dis-f {
+	transition: height 1s;
+}
+
+.slider {
+	position: relative;
+	position: absolute;
+	height: 300px;
+	width: 40px;
+	border-radius: 50px;
+	border: 2px solid;
+	top: calc(50% - 150px);
+}
+
+#click-sl {
+	right: -100%;
+	border-color: #007098;
+	/*background: #0081A750;*/
+	background: linear-gradient(#0081A795, #0081A780, #0081A770,transparent);
+	transition: right 0.3s;
+	box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#auto-sl {
+	border-color: #A4D37B;
+	background: linear-gradient(#B5E48C95, #B5E48C80, #B5E48C70,transparent);
+	left: -100%;
+	transition: left 0.3s;
+	box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flag-sl {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+	display: grid;
+	place-items: center;
+	color: var(--ltxt);
+	cursor: pointer;
+}
+
+.flag-click-sl {
+	background: #023d4e;
+}
+
+.flag-auto-sl {
+	background: #B5E48C;
+}
+
+#click-check:checked ~ #click-sl {
+	right: 10px;
+	transition: 0.3s;
+}
+
+#auto-check:checked ~ #auto-sl {
+	left: 10px;
+	transition: 0.3s;
+}
